@@ -1,24 +1,15 @@
-<MyGrid>
-    name: name
-    email: email
-    GridLayout:
-        cols: 1
-        size: root.width - 200, root.height - 200
-        pos: 100,100
-
-        GridLayout:
-            cols:2
-            Label:
-                text: "Name: "
-            TextInput:
-                id: name
-                multiline:False
-            Label:
-                text: "email: "
-            TextInput:
-                id: email
-                multiline:False
-
-        Button:
-            text:"Submit"
-            on_press: app.btn()
+<Button>:
+    font_size:40
+    color:0.3,0.6,0.7,1
+    size_hint: 0.3, 0.5
+<FloatLayout>:
+    Button:
+        id: btn1
+        pos_hint: {"x":0.5, "top":1}
+        text: "Nandha"if btn1.state == "normal" else "Kumar"
+        background_color: 0.3,0.4,0.5,1
+    Button:
+        id: btn
+        pos_hint: {"y": 0.3}
+        text: "Naren" if btn.state == "normal" else "Kutty"
+        background_color: 0.3,0.4,0.5,1
